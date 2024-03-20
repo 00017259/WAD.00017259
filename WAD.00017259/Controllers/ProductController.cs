@@ -45,7 +45,7 @@ namespace WAD._00017259.Controllers
         {
             var product = _mapper.Map<Product>(productDTO);
             _productRepository.Add(product);
-            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, productDTO);
+            return Ok(productDTO);
         }
 
         [HttpPut("{id}")]

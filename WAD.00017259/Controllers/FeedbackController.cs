@@ -45,7 +45,7 @@ namespace WAD._00017259.Controllers
         {
             var feedback = _mapper.Map<Feedback>(feedbackDTO);
             _feedbackRepository.Add(feedback);
-            return CreatedAtAction(nameof(GetFeedback), new { id = feedback.Id }, feedbackDTO);
+            return Ok(feedbackDTO);
         }
 
         [HttpPut("{id}")]
